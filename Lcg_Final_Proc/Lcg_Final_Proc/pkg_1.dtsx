@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{7438127E-8E53-40F0-B0BC-1A489A6282A4}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{2BAA52BB-30CD-4838-AA8D-05FF380FE0B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -203,6 +203,29 @@
                           name="FriendlyExpression">"third"</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]"
+                      name="dummy_ 4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"fourth"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"fourth"</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -284,7 +307,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Dept"
-                      cachedSortKeyPosition="-1"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Dept]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Dept]" />
                     <inputColumn
@@ -547,7 +570,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">-1</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -573,6 +596,23 @@
                       cachedLength="5"
                       cachedName="dummy3"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy3]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[dummy_ 4]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="dummy_ 4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -631,7 +671,7 @@
                       length="50"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Dept]"
                       name="Dept"
-                      sortKeyPosition="-1">
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -666,6 +706,20 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy3]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy_ 4]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy_ 4]"
+                      name="dummy_ 4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -718,11 +772,7 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="210.380953090531,264.476189966997" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Source"
@@ -731,6 +781,10 @@
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="213.119047592438,99.4761911292871" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Data Flow Task\Flat File Destination"
+          TopLeft="151.630953965974,270.976189850768" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="316,69.3333333333334">
@@ -768,67 +822,69 @@
         <NodeLayout
           Size="98.6666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Sort"
-          TopLeft="214.285711092608,194.57142522846" />
+          TopLeft="220.416664027919,186.533331380685" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="290.452380925771,142.142857795954">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-26.8333364998297,52.4285674325058"
+              EndConnector="-20.7023835645186,44.3904735847314"
               Start="0,0"
-              End="-26.8333364998297,44.9285674325058">
+              End="-20.7023835645186,36.8904735847314">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.2142837162529" />
+                    End="0,18.1952367923657" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.2142837162529"
-                    Point2="0,26.2142837162529"
-                    Point3="-4,26.2142837162529" />
+                    Point1="0,18.1952367923657"
+                    Point2="0,22.1952367923657"
+                    Point3="-4,22.1952367923657" />
                   <mssgle:LineSegment
-                    End="-22.8333364998297,26.2142837162529" />
+                    End="-16.7023835645186,22.1952367923657" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.8333364998297,26.2142837162529"
-                    Point2="-26.8333364998297,26.2142837162529"
-                    Point3="-26.8333364998297,30.2142837162529" />
+                    Point1="-16.7023835645186,22.1952367923657"
+                    Point2="-20.7023835645186,22.1952367923657"
+                    Point3="-20.7023835645186,26.1952367923657" />
                   <mssgle:LineSegment
-                    End="-26.8333364998297,44.9285674325058" />
+                    End="-20.7023835645186,36.8904735847314" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-18.3511917822593,27.1952367923657,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="263.619044425942,237.238091895126">
+          TopLeft="269.749997361253,229.199998047352">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32.7619086645898,27.2380980718703"
+              EndConnector="-32.1190433952785,41.7761918034161"
               Start="0,0"
-              End="32.7619086645898,19.7380980718703">
+              End="-32.1190433952785,34.2761918034161">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.61904903593516" />
+                    End="0,16.8880959017081" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.61904903593516"
-                    Point2="0,13.6190490359352"
-                    Point3="4,13.6190490359352" />
+                    Point1="0,16.8880959017081"
+                    Point2="0,20.8880959017081"
+                    Point3="-4,20.8880959017081" />
                   <mssgle:LineSegment
-                    End="28.7619086645898,13.6190490359352" />
+                    End="-28.1190433952785,20.8880959017081" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.7619086645898,13.6190490359352"
-                    Point2="32.7619086645898,13.6190490359352"
-                    Point3="32.7619086645898,17.6190490359352" />
+                    Point1="-28.1190433952785,20.8880959017081"
+                    Point2="-32.1190433952785,20.8880959017081"
+                    Point3="-32.1190433952785,24.8880959017081" />
                   <mssgle:LineSegment
-                    End="32.7619086645898,19.7380980718703" />
+                    End="-32.1190433952785,34.2761918034161" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
