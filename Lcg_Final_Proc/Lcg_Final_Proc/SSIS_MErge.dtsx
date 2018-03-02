@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="3/2/2018 6:11:58 PM"
+  DTS:CreationDate="3/2/2018 6:30:31 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DFZLT-00011"
   DTS:CreatorName="DFI\kartheek"
-  DTS:DTSID="{DA74D4F6-B233-4B59-9C0E-F1B0F15916C8}"
+  DTS:DTSID="{56D761F4-C317-4992-9DCE-539E0D246445}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2165.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="dfz_lcg"
+  DTS:ObjectName="SSIS_Merge"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{44C705E2-531A-4D80-9A7D-7C1ADE256785}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{B37C8C35-087B-40AA-B23B-1D0381786F74}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -125,7 +125,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{56BAA9AF-2CDF-4EFA-A1F9-1E575D0B6052}"
+      DTS:DTSID="{8B7E3238-9EFF-4C53-B527-1E7DC8D6BB37}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task">
@@ -201,6 +201,29 @@
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">"faatc"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy5]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy5]"
+                      name="dummy5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"sixth"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"sixth"</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -516,18 +539,18 @@
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="125.452379708844,17.1000007671118" />
+          TopLeft="65.297619415713,60" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="120.154760293131,132.80952446262" />
+          TopLeft="60,175.709523695508" />
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="150,294.309523184101" />
+          TopLeft="89.845239706869,337.209522416989" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="197.488093626464,175.476191129287">
+          TopLeft="137.333333333333,218.376190362175">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -561,7 +584,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="199.470236667654,59.7666674337784">
+          TopLeft="139.315476374523,102.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
