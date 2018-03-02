@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="3/2/2018 3:18:49 PM"
+  DTS:CreationDate="3/2/2018 6:11:58 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DFZLT-00011"
   DTS:CreatorName="DFI\kartheek"
-  DTS:DTSID="{837FA50C-8BB2-467C-8FF3-2F84D8843422}"
+  DTS:DTSID="{DA74D4F6-B233-4B59-9C0E-F1B0F15916C8}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2165.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="pkg_1"
+  DTS:ObjectName="dfz_lcg"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{4EFC8171-D65E-48EE-B54A-16ADD40109CA}">
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{D3EF025F-6FAE-4C6B-924F-D9B11A9C9718}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -125,7 +125,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{1E877C41-A0D0-49F3-AD40-89E31A3BC486}"
+      DTS:DTSID="{56BAA9AF-2CDF-4EFA-A1F9-1E575D0B6052}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task">
@@ -162,7 +162,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="3"
+                      length="9"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy]"
                       name="dummy"
                       truncationRowDisposition="FailComponent">
@@ -171,59 +171,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">"ext"</property>
+                          name="Expression">"datafactz"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">"ext"</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy3]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="5"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy3]"
-                      name="dummy3"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">"third"</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">"third"</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="6"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]"
-                      name="dummy_ 4"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">"fourth"</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">"fourth"</property>
+                          name="FriendlyExpression">"datafactz"</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -292,7 +246,7 @@
                       cachedLength="50"
                       cachedName="EPID"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EPID]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EPID]" />
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EPID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Name]"
                       cachedCodepage="1252"
@@ -300,23 +254,22 @@
                       cachedLength="50"
                       cachedName="Name"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Name]" />
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Name]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Dept]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Dept"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Dept]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Dept]" />
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Dept]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[dummy]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="9"
                       cachedName="dummy"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[dummy]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -496,242 +449,11 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[EPID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="EPID"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EPID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Name"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Name]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Dept]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Dept"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Dept]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[dummy]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="dummy"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[dummy3]"
-                      cachedDataType="wstr"
-                      cachedLength="5"
-                      cachedName="dummy3"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy3]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[dummy_ 4]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="dummy_ 4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EPID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EPID]"
-                      name="EPID">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EPID]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Name]"
-                      name="Name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Dept]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Dept]"
-                      name="Dept"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Dept]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy]"
-                      name="dummy">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy3]"
-                      dataType="wstr"
-                      length="5"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy3]"
-                      name="dummy3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy3]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy_ 4]"
-                      dataType="wstr"
-                      length="6"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dummy_ 4]"
-                      name="dummy_ 4">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy_ 4]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
@@ -739,11 +461,6 @@
               endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -774,64 +491,26 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="220.416664027919,186.533331380685" />
-        <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="240,26.6666666666667" />
+          TopLeft="148.369046034026,60" />
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="151.630953965974,270.976189850768" />
+          TopLeft="150,294.309523184101" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="213.119047592438,99.4761911292871" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="269.749997361253,229.199998047352">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-32.1190433952785,41.7761918034161"
-              Start="0,0"
-              End="-32.1190433952785,34.2761918034161">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8880959017081" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.8880959017081"
-                    Point2="0,20.8880959017081"
-                    Point3="-4,20.8880959017081" />
-                  <mssgle:LineSegment
-                    End="-28.1190433952785,20.8880959017081" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-28.1190433952785,20.8880959017081"
-                    Point2="-32.1190433952785,20.8880959017081"
-                    Point3="-32.1190433952785,24.8880959017081" />
-                  <mssgle:LineSegment
-                    End="-32.1190433952785,34.2761918034161" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="120.154760293131,132.80952446262" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="316,69.3333333333334">
+          TopLeft="224.369046034026,102.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-25.5476190742286,30.1428577959537"
+              EndConnector="-26.880952407562,30.1428577959537"
               Start="0,0"
-              End="-25.5476190742286,22.6428577959537">
+              End="-26.880952407562,22.6428577959537">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -842,13 +521,13 @@
                     Point2="0,15.0714288979769"
                     Point3="-4,15.0714288979769" />
                   <mssgle:LineSegment
-                    End="-21.5476190742286,15.0714288979769" />
+                    End="-22.880952407562,15.0714288979769" />
                   <mssgle:CubicBezierSegment
-                    Point1="-21.5476190742286,15.0714288979769"
-                    Point2="-25.5476190742286,15.0714288979769"
-                    Point3="-25.5476190742286,19.0714288979769" />
+                    Point1="-22.880952407562,15.0714288979769"
+                    Point2="-26.880952407562,15.0714288979769"
+                    Point3="-26.880952407562,19.0714288979769" />
                   <mssgle:LineSegment
-                    End="-25.5476190742286,22.6428577959537" />
+                    End="-26.880952407562,22.6428577959537" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -859,30 +538,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="290.452380925771,142.142857795954">
+          TopLeft="197.488093626464,175.476191129287">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-20.7023835645186,44.3904735847314"
+              EndConnector="38.511906373536,118.833332054814"
               Start="0,0"
-              End="-20.7023835645186,36.8904735847314">
+              End="38.511906373536,111.333332054814">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.1952367923657" />
+                    End="0,55.416666027407" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.1952367923657"
-                    Point2="0,22.1952367923657"
-                    Point3="-4,22.1952367923657" />
+                    Point1="0,55.416666027407"
+                    Point2="0,59.416666027407"
+                    Point3="4,59.416666027407" />
                   <mssgle:LineSegment
-                    End="-16.7023835645186,22.1952367923657" />
+                    End="34.511906373536,59.416666027407" />
                   <mssgle:CubicBezierSegment
-                    Point1="-16.7023835645186,22.1952367923657"
-                    Point2="-20.7023835645186,22.1952367923657"
-                    Point3="-20.7023835645186,26.1952367923657" />
+                    Point1="34.511906373536,59.416666027407"
+                    Point2="38.511906373536,59.416666027407"
+                    Point3="38.511906373536,63.416666027407" />
                   <mssgle:LineSegment
-                    End="-20.7023835645186,36.8904735847314" />
+                    End="38.511906373536,111.333332054814" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
