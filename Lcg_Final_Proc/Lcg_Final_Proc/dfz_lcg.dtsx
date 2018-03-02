@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="dfz_lcg"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{D3EF025F-6FAE-4C6B-924F-D9B11A9C9718}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{F4200209-1A7B-4AFD-A0AA-209062012CEC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -178,6 +178,29 @@
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">"datafactz"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy 4]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[dummy 4]"
+                      name="dummy 4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"faatc"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"faatc"</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -491,43 +514,31 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="148.369046034026,60" />
-        <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Destination"
           TopLeft="150,294.309523184101" />
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="125.452379708844,17.1000007671118" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="120.154760293131,132.80952446262" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="224.369046034026,102.666666666667">
+          TopLeft="199.470236667654,59.7666674337784">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-26.880952407562,30.1428577959537"
+              EndConnector="0,73.0428570288416"
               Start="0,0"
-              End="-26.880952407562,22.6428577959537">
+              End="0,65.5428570288416">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.0714288979769" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.0714288979769"
-                    Point2="0,15.0714288979769"
-                    Point3="-4,15.0714288979769" />
-                  <mssgle:LineSegment
-                    End="-22.880952407562,15.0714288979769" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.880952407562,15.0714288979769"
-                    Point2="-26.880952407562,15.0714288979769"
-                    Point3="-26.880952407562,19.0714288979769" />
-                  <mssgle:LineSegment
-                    End="-26.880952407562,22.6428577959537" />
+                    End="0,65.5428570288416" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
